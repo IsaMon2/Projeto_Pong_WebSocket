@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Pong WebSocket</title>
+  </head>
+
+  <body>
+    <div class="game-container">
+      <h1>PONG</h1>
+
+      <!-- PLACAR -->
+      <div class="score">
+        <span id="score-player1">0</span>
+        <span>x</span>
+        <span id="score-player2">0</span>
+      </div>
+
+      <!-- CAMPO DO JOGO -->
+      <div id="game">
+        <div id="paddle-player1" class="paddle"></div>
+
+        <div id="ball"></div>
+
+        <div id="paddle-player2" class="paddle"></div>
+
+        <!-- TELA DE FIM DE JOGO -->
+        <div id="game-over">
+          <div id="game-over-content">
+            <h2 id="winner-message">Jogador venceu!</h2>
+
+            <p id="final-score">0 x 0</p>
+
+            <button id="restart-button">Jogar Novamente</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATUS -->
+      <p id="status">Conectando ao servidor...</p>
+
+      <!-- CONTROLES -->
+      <div class="controls">
+        <div class="control-player">
+          <strong>Jogador 1</strong>
+          <span>W / S</span>
+        </div>
+
+        <div class="control-player">
+          <strong>Jogador 2</strong>
+          <span>↑ / ↓</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
